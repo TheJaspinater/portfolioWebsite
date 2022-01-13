@@ -1,0 +1,131 @@
+
+.contact-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 91.666667%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 206, 147);
+}
+
+.form-list {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contact-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cotact-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.form-input-good {
+    width: 50%;
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    resize: none;
+    color: rgb(22, 163, 74, 1);
+}
+.form-input-good:hover {
+    color: rgb(0, 0, 0, 1);
+}
+.form-input-good::placeholder {
+    color: rgb(30, 58, 138, 1);
+}
+.form-input-good:hover::placeholder {
+    color: rgb(0, 0, 0, 1);
+}
+
+.form-input-bad {
+    width: 50%;
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    resize: none;
+    color: rgb(239, 68, 68, 1);
+}
+.form-input-bad:hover {
+    color: rgb(0, 0, 0, 1);
+}
+.form-input-bad::placeholder {
+    color: rgb(239, 68, 68, 1);
+}
+.form-input-bad:hover::placeholder {
+    color: rgb(0, 0, 0, 1);
+}
+
+.contact-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(255, 255, 255, 1);
+}
+
+.contact-description {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 1);
+}
+
+.contact-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    border-radius: 1.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+.contact-button:hover {
+    background-color: rgb(75, 85, 99, 1);
+    border-radius: 0.50rem;
+    color: rgb(255, 255, 255, 1);
+}
