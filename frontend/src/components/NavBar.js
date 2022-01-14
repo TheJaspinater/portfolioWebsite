@@ -16,10 +16,10 @@ const NavBar = () => {
                     <NavBarIcon icon={<TiDocument size="100"/>} description={"R E S U M E"}/>
                 </Link>
                 <Link to="/Projects" className="navbar-link">
-                    <NavBarIcon icon={<BsCodeSlash size="100"/>} description={"P R O J E C T S"}/>
+                    <NavBarIcon icon={<BsCodeSlash size="55"/>} description={"P R O J E C T S"}/>
                 </Link>
                 <Link to="/Contact" className="navbar-link">
-                    <NavBarIcon icon={<FiMessageSquare size="75" className="flip-horizontal"/>} description={"C O N T A C T"}/>
+                    <NavBarIcon icon={<FiMessageSquare size="60" className="flip-horizontal"/>} description={"C O N T A C T"}/>
                 </Link>
             </div>
         </div>

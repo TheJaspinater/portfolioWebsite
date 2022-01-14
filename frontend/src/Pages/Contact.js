@@ -1,4 +1,5 @@
 import './Contact.css';
+import paperTexture from '../images/paperTexture.jpg';
 import React, { useState, useRef, useEffect} from "react";
 import Axios from '../api/Posts.js';
 import { RiSendPlane2Line } from 'react-icons/ri';
@@ -23,7 +24,7 @@ const Contact = () => {
     const parentRef = useRef();
 
     const checkEmail = (email) => {
-        var re = /[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         return re.test(email);
     }
 
@@ -79,6 +80,7 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
+            <img src={paperTexture} className='backgroundTexture'/>
             <div className="form-list">
                 <div className="collapsible">
                     <div className="content-parent"
@@ -120,24 +122,26 @@ const Contact = () => {
                 </div>
 
                 {hasRendered && sent && <div className="contact-form">
-                    <SubmitIcon icon={<RiSendPlane2Line size="100"/>} description={"S E N T"}/>
+                    <SubmitIcon icon={<RiSendPlane2Line size="100"/>} description={"S E N T"} iconCss={"contact-icon-sent"}/>
                 </div>}
+
                 {!sent && <div className="contact-form">
                     <button onClick={handleSubmit} className="contact-button">
-                        <SubmitIcon icon={<RiSendPlane2Line size="100"/>} description={"S E N D"}/>
+                        <SubmitIcon icon={<RiSendPlane2Line size="100"/>} description={"S E N D"} iconCss={"contact-icon"}/>
                     </button>
                 </div>}
-                <button onClick={() => setSent(!sent)}>
+
+                {/* <button onClick={() => setSent(!sent)}>
                         TEST
-                </button>
+                </button> */}
             </div>
         </div>
     )
 }
 
-const SubmitIcon = ({icon, description}) => (
+const SubmitIcon = ({icon, description, iconCss}) => (
     <div>
-        <div className="contact-icon">
+        <div className={iconCss}>
             {icon}
         </div>
         <div className="contact-description">

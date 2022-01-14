@@ -11,7 +11,7 @@
     width: 91.666667%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(253, 206, 147);
+    background-color: #ece4db;
 }
 
 .form-list {
@@ -35,6 +35,7 @@
     line-height: 2.25rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
+    color: #27187E;
 }
 
 .form-input-good {
@@ -50,18 +51,32 @@
     line-height: 2rem;
     font-weight: 700;
     resize: none;
-    color: rgb(22, 163, 74, 1);
+    color: #529959;
 }
 .form-input-good:hover {
-    color: rgb(0, 0, 0, 1);
+    color: #fec89a;
 }
 .form-input-good::placeholder {
-    color: rgb(30, 58, 138, 1);
+    color: #27187E;
 }
 .form-input-good:hover::placeholder {
-    color: rgb(0, 0, 0, 1);
+    color: #fec89a;
 }
 
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
 .form-input-bad {
     width: 50%;
     font-weight: 700;
@@ -76,15 +91,18 @@
     font-weight: 700;
     resize: none;
     color: rgb(239, 68, 68, 1);
+    animation: shake;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
 }
 .form-input-bad:hover {
-    color: rgb(0, 0, 0, 1);
+    color: #fec89a;
 }
 .form-input-bad::placeholder {
     color: rgb(239, 68, 68, 1);
 }
 .form-input-bad:hover::placeholder {
-    color: rgb(0, 0, 0, 1);
+    color: #fec89a;
 }
 
 .contact-icon {
@@ -98,7 +116,38 @@
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(255, 255, 255, 1);
+    color: #529959;
+    border-radius: 1.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+}
+.contact-icon:hover {
+    background-color: rgb(192, 192, 192);
+    border-radius: 0.50rem;;
+    color: #fec89a;
+}
+
+@keyframes spin {
+    from { transform:rotate(0deg) }
+    to { transform:rotate(1800deg) }
+}
+.contact-icon-sent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #529959;
+    animation: spin;
+    animation-duration: 1750ms;
+    animation-timing-function: ease-in-out;
 }
 
 .contact-description {
@@ -111,7 +160,7 @@
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
-    color: rgb(255, 255, 255, 1);
+    color: #529959;
 }
 
 .contact-button {
@@ -121,17 +170,8 @@
     cursor: pointer;
     overflow: hidden;
     outline: none;
-    border-radius: 1.5rem;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-    transition-timing-function: linear;
 }
-.contact-button:hover {
-    background-color: rgb(75, 85, 99, 1);
-    border-radius: 0.50rem;
-    color: rgb(255, 255, 255, 1);
-}
+
 
 .collapsible {
     background: transparent;
@@ -144,10 +184,18 @@
 .collapsible .content-parent {
     height: "0px";
     overflow: hidden;
-    transition: height ease 5s;
+    transition: height ease 2s;
 }
 
 .collapsible .content-parent.show {
     height: auto;
 }
 
+.backgroundTexture {
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    opacity: 25%;
+    position: absolute;
+}
