@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
 
 .contact-container {
     position: fixed;
@@ -121,7 +125,6 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    transition-duration: 200ms;
     transition-timing-function: linear;
 }
 .contact-button:hover {
@@ -129,3 +132,22 @@
     border-radius: 0.50rem;
     color: rgb(255, 255, 255, 1);
 }
+
+.collapsible {
+    background: transparent;
+}
+
+.collapsible .content {
+    border: transparent;
+}
+
+.collapsible .content-parent {
+    height: "0px";
+    overflow: hidden;
+    transition: height ease 5s;
+}
+
+.collapsible .content-parent.show {
+    height: auto;
+}
+
