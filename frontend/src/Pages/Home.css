@@ -1,0 +1,110 @@
+.home-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 91.666667%;
+    z-index: 2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 50%;
+    grid-auto-rows: minmax(100px, auto);
+    height: 100vh;
+    width: 91.666667%;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.welcome-banner {
+    grid-column: span 2;
+    white-space: pre;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    color: #27187E;
+    font-weight: 700;
+    font-size: 1.875rem;
+    overflow-wrap: break-word;
+}
+
+.check-icon-1 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+}
+.check-icon-2 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.check-icon-3 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #529959;
+}
+
+.description-1 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.description-2 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.description-3 {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.description-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #27187E;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.description {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #27187E;
+}
+
