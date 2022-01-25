@@ -1,0 +1,23 @@
+.container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 91.666667%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ece4db;
+    z-index: 0;
+}
+
+.backgroundTexture {
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    opacity: 25%;
+    position: absolute;
+    background-image: url('../images/paperTexture2.jpg');
+    background-size: cover;
+    z-index: 1;
+}

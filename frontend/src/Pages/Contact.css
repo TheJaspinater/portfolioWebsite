@@ -3,17 +3,6 @@
     background: transparent;
 }
 
-.contact-container {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    height: 100vh;
-    width: 91.666667%;
-    display: flex;
-    flex-direction: column;
-    background-color: #ece4db;
-}
-
 .form-list {
     margin-top: auto;
     margin-bottom: auto;
@@ -189,13 +178,4 @@
 
 .collapsible .content-parent.show {
     height: auto;
-}
-
-.backgroundTexture {
-    top: 0px;
-    right: 0px;
-    height: 100vh;
-    width: 100%;
-    opacity: 25%;
-    position: absolute;
 }

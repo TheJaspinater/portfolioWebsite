@@ -1,5 +1,5 @@
 import './Contact.css';
-import paperTexture from '../images/paperTexture.jpg';
+import './PagesContainer.css';
 import React, { useState, useRef, useEffect} from "react";
 import Axios from '../api/Posts.js';
 import { RiSendPlane2Line } from 'react-icons/ri';
@@ -18,8 +18,6 @@ const Contact = () => {
     const [error, setError] = useState("");
     const [sent, setSent] = useState(true);
     const [hasRendered, setHasRendered] = useState(false);
-
-    if (error);
 
     const parentRef = useRef();
 
@@ -48,12 +46,12 @@ const Contact = () => {
                 setSent(true);
               } else {
                 setError(res.data.response);
-                alert(Error);
+                alert(error);
               }
             })
             .catch(() => {
               setError("Failed to Auth");
-              alert(Error);
+              alert(error);
             });
         } else {
             if (name === ""){
@@ -80,7 +78,6 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
-            <img src={paperTexture} className='backgroundTexture'/>
             <div className="form-list">
                 <div className="collapsible">
                     <div className="content-parent"

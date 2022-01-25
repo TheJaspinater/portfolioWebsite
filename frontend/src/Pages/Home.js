@@ -1,8 +1,12 @@
+import './Home.css';
+import './PagesContainer.css';
 
 const Home = () => {
     return(
-        <div>
-            HOME PAGE
+        <div className="contact-container">
+            <div>
+                
+            </div>
         </div>
     );
 }

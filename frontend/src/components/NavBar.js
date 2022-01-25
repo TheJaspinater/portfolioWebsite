@@ -1,9 +1,10 @@
 import './NavBar.css';
 import { Link } from "react-router-dom";
+import { ExternalLink } from 'react-external-link';
 import { RiHome2Line } from 'react-icons/ri'; //Icons
 import { TiDocument } from 'react-icons/ti';
 import { BsCodeSlash } from 'react-icons/bs';
-import { FiMessageSquare } from 'react-icons/fi';
+import { FiMessageSquare, FiLinkedin, FiGithub } from 'react-icons/fi';
 
 const NavBar = () => {
     return (
@@ -21,6 +22,12 @@ const NavBar = () => {
                 <Link to="/Contact" className="navbar-link">
                     <NavBarIcon icon={<FiMessageSquare size="60" className="flip-horizontal"/>} description={"C O N T A C T"}/>
                 </Link>
+                <ExternalLink href="https://www.linkedin.com/in/lakejasper/" className="navbar-link">
+                    <NavBarIcon icon={<FiLinkedin size="55"/>} description={"L I N K E D I N"}/>
+                </ExternalLink>
+                <ExternalLink href="https://github.com/TheJaspinater" className="navbar-link">
+                    <NavBarIcon icon={<FiGithub size="55"/>} description={"G I T H U B"}/>
+                </ExternalLink>
             </div>
         </div>
     )

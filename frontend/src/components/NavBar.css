@@ -57,3 +57,8 @@
 .navbar-link {
     text-decoration: none;
 }
+
+.external-links-list {
+    position: absolute;
+    bottom: 0px;
+}
