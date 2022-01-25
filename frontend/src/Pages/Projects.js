@@ -1,8 +1,7 @@
 import './Projects.css';
-import './PagesContainer.css';
 const Projects = () => {
     return(
-        <div className="contact-container">
+        <div>
             PROJECTS PAGE
         </div>
     );

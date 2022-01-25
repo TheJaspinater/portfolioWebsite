@@ -2,8 +2,8 @@ import './Background.css';
 
 const Background = () => {
     return(
-        <div className="container">
-            <div className='backgroundTexture'/>
+        <div className="background-container">
+            <div className='background-texture'/>
         </div>
     );
 }

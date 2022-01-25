@@ -1,5 +1,4 @@
 import './Contact.css';
-import './PagesContainer.css';
 import React, { useState, useRef, useEffect} from "react";
 import Axios from '../api/Posts.js';
 import { RiSendPlane2Line } from 'react-icons/ri';
