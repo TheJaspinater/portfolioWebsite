@@ -35,7 +35,7 @@
     line-height: 2.25rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
-    color: #27187E;
+    color: #529959;
 }
 
 .form-input-good {
@@ -54,13 +54,13 @@
     color: #529959;
 }
 .form-input-good:hover {
-    color: #fec89a;
+    color: #F4A261;
 }
 .form-input-good::placeholder {
-    color: #27187E;
+    color: #529959;
 }
 .form-input-good:hover::placeholder {
-    color: #fec89a;
+    color: #F4A261;
 }
 
 @keyframes shake {
@@ -96,13 +96,13 @@
     animation-timing-function: ease-in-out;
 }
 .form-input-bad:hover {
-    color: #fec89a;
+    color: #F4A261;
 }
 .form-input-bad::placeholder {
     color: rgb(239, 68, 68, 1);
 }
 .form-input-bad:hover::placeholder {
-    color: #fec89a;
+    color: #F4A261;
 }
 
 .contact-icon {
@@ -116,7 +116,7 @@
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    color: #529959;
+    color: #264653;
     border-radius: 1.5rem;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,9 +124,9 @@
     transition-timing-function: linear;
 }
 .contact-icon:hover {
-    background-color: rgb(192, 192, 192);
+    background-color: #E9C46A;
     border-radius: 0.50rem;;
-    color: #fec89a;
+    color: #F4A261;
 }
 
 @keyframes spin {
@@ -144,7 +144,7 @@
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    color: #529959;
+    color: #264653;
     animation: spin;
     animation-duration: 1750ms;
     animation-timing-function: ease-in-out;
@@ -160,7 +160,7 @@
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
-    color: #529959;
+    color: #264653;
 }
 
 .contact-button {
