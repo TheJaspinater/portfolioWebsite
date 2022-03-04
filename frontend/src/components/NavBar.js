@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <div className="navbar-container">
             <div className="navbar-list">
-                <Link to="/Home" className="navbar-link">
+                <Link to="/" className="navbar-link">
                     <NavBarIcon icon={<RiHome2Line size="85"/>} description={"H O M E"}/>
                 </Link>
                 <Link to="/Resume" className="navbar-link">

@@ -77,6 +77,7 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
+            <div className='fake-max-margin'/>
             <div className="form-list">
                 <div className="collapsible">
                     <div className="content-parent"
@@ -93,7 +94,7 @@ const Contact = () => {
                     >
                         <div className="content">
                             <div className="contact-form">
-                                <label className="cotact-title">C O N T A C T</label>
+                                <label className="contact-title">C O N T A C T</label>
                             </div>
                             <div className="contact-form">
                                 <textarea placeholder="N A M E *" value={name} onChange={(e) => {setName(e.target.value); setNameCSS("form-input-good")}} className={nameCSS}></textarea>
