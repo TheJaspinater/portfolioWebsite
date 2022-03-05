@@ -2,6 +2,10 @@
     top: 0px;
     margin-top: 15%;
 }
+.fake-min-margin {
+    top: 0px;
+    margin-bottom: 15%;
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -58,6 +62,7 @@
     font-weight: 700;
     resize: none;
     color: #529959;
+    text-align: left;
 }
 .form-input-good:hover {
     color: #F4A261;
@@ -97,6 +102,7 @@
     font-weight: 700;
     resize: none;
     color: rgb(239, 68, 68, 1);
+    text-align: left;
     animation: shake;
     animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
@@ -190,7 +196,7 @@
 .collapsible .content-parent {
     height: "0px";
     overflow: hidden;
-    transition: height ease 2s;
+    transition: height ease 1s;
 }
 
 .collapsible .content-parent.show {

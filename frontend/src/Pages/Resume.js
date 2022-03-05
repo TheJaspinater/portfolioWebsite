@@ -1,6 +1,8 @@
 import './Resume.css';
 import React, { useState, useRef, useEffect} from "react";
 import { BiDownload } from 'react-icons/bi';
+import fileDownload from 'js-file-download';
+import Axios from '../api/Posts.js';
 
 const Resume = () => {
     const [hasRendered, setHasRendered] = useState(false);
@@ -8,16 +10,24 @@ const Resume = () => {
     const [verifyCSS, setVerifyCSS] = useState("form-input-good");
     const parentRef = useRef();
     const [iconCss, setIconCss] = useState("download-icon");
-
+    
     const checkVerify = (verify) => {
         var re = /^\d\d\d$/;
         return re.test(verify);
     }
 
-    const handleDownload = () => {
+    const handleDownload = async () => {
         if (checkVerify(verify)){
             setVerify("");
             setIconCss("download-icon-spin");
+
+        Axios.get("/DownloadResume", {
+            responseType: 'blob',
+        }).then((res) => {
+            fileDownload(res.data, "LakeJasperResume2022.pdf");
+        });
+
+
         } else {
             if (checkVerify(verify) === false){
                 setVerifyCSS("form-input-bad");
@@ -193,8 +203,18 @@ const Resume = () => {
                                     <li>Assured site stability via quality assurance testing.</li>
                                 </ul>
                             </div>
+                            <div className="margin"/>
                             <div className="resume-content">
-                                <input type="text" placeholder="V E R I F Y   |   enter a 3 digit number *" value={verify} onChange={(e) => {setVerify(e.target.value); setVerifyCSS("form-input-good"); setIconCss("download-icon")}} className={verifyCSS}></input>
+                                <input type="text"
+                                    placeholder="V E R I F Y   |   enter a 3 digit number *"
+                                    value={verify}
+                                    onChange={
+                                        (e) => {
+                                            setVerify(e.target.value);
+                                            setVerifyCSS("form-input-good");
+                                            setIconCss("download-icon")}}
+                                    className={verifyCSS}> 
+                                </input>
                             </div>
                         </div>
                     </div>

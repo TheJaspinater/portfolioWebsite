@@ -55,6 +55,12 @@ app.post("/Contact", (req, res) => {
     return res.status(200).json({ success: true });
 });
 
+app.get("/DownloadResume", (req, res) => {
+    console.log("Download rquested");
+    res.sendFile("./LakeJasperResume2022.pdf", {root: __dirname} )
+    //return res.status(200).json({ success: true });
+});
+
 var server = app.listen(port, function(error) {
     if (error) {
         console.log('Error: Something went wrong', error);

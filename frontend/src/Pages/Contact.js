@@ -21,7 +21,7 @@ const Contact = () => {
     const parentRef = useRef();
 
     const checkEmail = (email) => {
-        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         return re.test(email);
     }
 
@@ -49,7 +49,7 @@ const Contact = () => {
               }
             })
             .catch(() => {
-              setError("Failed to Auth");
+              setError("Failed To Make Contact.");
               alert(error);
             });
         } else {
@@ -127,10 +127,7 @@ const Contact = () => {
                         <SubmitIcon icon={<RiSendPlane2Line size="100"/>} description={"S E N D"} iconCss={"contact-icon"}/>
                     </button>
                 </div>}
-
-                {/* <button onClick={() => setSent(!sent)}>
-                        TEST
-                </button> */}
+                <div className='fake-min-margin'/>
             </div>
         </div>
     )

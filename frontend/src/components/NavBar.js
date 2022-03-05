@@ -16,9 +16,9 @@ const NavBar = () => {
                 <Link to="/Resume" className="navbar-link">
                     <NavBarIcon icon={<TiDocument size="100"/>} description={"R E S U M E"}/>
                 </Link>
-                <Link to="/Projects" className="navbar-link">
+                {/*<Link to="/Projects" className="navbar-link">
                     <NavBarIcon icon={<BsCodeSlash size="55"/>} description={"P R O J E C T S"}/>
-                </Link>
+        </Link>*/}
                 <Link to="/Contact" className="navbar-link">
                     <NavBarIcon icon={<FiMessageSquare size="60" className="flip-horizontal"/>} description={"C O N T A C T"}/>
                 </Link>
