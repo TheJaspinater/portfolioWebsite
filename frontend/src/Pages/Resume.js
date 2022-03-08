@@ -20,14 +20,13 @@ const Resume = () => {
         if (checkVerify(verify)){
             setVerify("");
             setIconCss("download-icon-spin");
-
-        Axios.get("/DownloadResume", {
-            responseType: 'blob',
-        }).then((res) => {
-            fileDownload(res.data, "LakeJasperResume2022.pdf");
-        });
-
-
+            Axios.get("/DownloadResume", {
+                responseType: 'blob',
+                withCredentials: false,
+                crossdomain: true
+            }).then((res) => {
+                fileDownload(res.data, "LakeJasperResume2022.pdf");
+            });
         } else {
             if (checkVerify(verify) === false){
                 setVerifyCSS("form-input-bad");
@@ -185,9 +184,9 @@ const Resume = () => {
                             <div className="resume-content">
                                 <ul className="resume-details">
                                     <li>Directed a team of 8 with sub-teams focusing on UI, database, and networking solutions.</li>
-                                    <li>Achieved Large scale video upload/download along with in-browser playback/streaming/buffering Achieved persistent video and file hosting utilizing 3 languages and 4 technologies.</li>
+                                    <li>Achieved Large scale video upload/download along with in-browser playback/streaming/buffering in addition to persistent video and file hosting utilizing 3 languages and 4 technologies.</li>
                                     <li>Integrated real-time body tracking and pose estimation with 1 language and 2 technologies.</li>
-                                    <li>Supported cross-user communication to connect admin and user clients in addition o supporting admin and user site variations.</li>
+                                    <li>Supported cross-user communication to connect admin and user clients in addition to supporting admin and user site variations.</li>
                                 </ul>
                             </div>
                             <div className="resume-content">

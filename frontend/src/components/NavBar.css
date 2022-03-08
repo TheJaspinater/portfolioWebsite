@@ -9,6 +9,7 @@
     background-color:#2A9D8F;
     color: rgb(255, 255, 255, 1);
     overflow:scroll;
+    min-width:min-content;
 }
 
 .navbar-list {

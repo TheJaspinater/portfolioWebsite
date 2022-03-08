@@ -19,3 +19,11 @@
 ## data: { error: 'invalid_grant', error_description: 'Bad Request' },
 ## Solution: refresh token timed out. Sign into acount and generate new token
 ## video guide if confused: https://www.youtube.com/watch?v=-rcRf7yswfM
+
+# update site and nginx
+## create new build
+## copy build folder to www folder
+## sudo cp -r /home/pi/website/portfolioWebsite/frontend/build/* /var/www/html
+## reload and restart
+## sudo service nginx reload
+## sudo service nginx restart

@@ -8,10 +8,12 @@ const app = express();
 const port = 3001;
 
 const corsOptions ={
-    origin:'*', 
-    credentials:true,
-    optionSuccessStatus:200,
+   origin:'*', 
+   credentials:true,
+   optionSuccessStatus:200,
 }
+
+app.use(cors(corsOptions))
 
 const oAuth2Client = new google.auth.OAuth2(Credentials.CLIENT_ID, Credentials.CLIENT_SECRET, Credentials.REDIRECT_URI);
 oAuth2Client.setCredentials({refresh_token: Credentials.REFRESH_TOKEN})
@@ -58,7 +60,6 @@ app.post("/Contact", (req, res) => {
 app.get("/DownloadResume", (req, res) => {
     console.log("Download rquested");
     res.sendFile("./LakeJasperResume2022.pdf", {root: __dirname} )
-    //return res.status(200).json({ success: true });
 });
 
 var server = app.listen(port, function(error) {
