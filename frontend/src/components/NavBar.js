@@ -35,33 +35,34 @@ const NavBar = () => {
                     <NavBarIcon icon={<FiGithub size="55"/>} description={"G I T H U B"}/>
                 </ExternalLink>
             </div>}
+            {/*Mobile*/}
             {isMobile && <button className="hamburger-icon" onClick={handleMenuExpand}>
                 <GoThreeBars size="55"/>
             </button>}
             {isMobile && <div className={isExpanded ? "menu active" : "menu"}>
                 <div className="prevent-resize">
                     <Link to="/" className="navbar-link" onClick={handleMenuExpand}>
-                        <NavBarIcon icon={<RiHome2Line size="85"/>} description={"H O M E"}/>
+                        <NavBarIcon icon={<RiHome2Line size="85"/>} description={"H O M E"} mobile={isMobile}/>
                     </Link>
                 </div>
                 <div className="prevent-resize">
                 <Link to="/Resume" className="navbar-link" onClick={handleMenuExpand}>
-                    <NavBarIcon icon={<TiDocument size="100"/>} description={"R E S U M E"}/>
+                    <NavBarIcon icon={<TiDocument size="100"/>} description={"R E S U M E"} mobile={isMobile}/>
                 </Link>
                 </div>
                 <div className="prevent-resize">
                 <Link to="/Contact" className="navbar-link" onClick={handleMenuExpand}>
-                    <NavBarIcon icon={<FiMessageSquare size="60" className="flip-horizontal"/>} description={"C O N T A C T"}/>
+                    <NavBarIcon icon={<FiMessageSquare size="60" className="flip-horizontal"/>} description={"C O N T A C T"} mobile={isMobile}/>
                 </Link>
                 </div>
                 <div className="prevent-resize">
                 <ExternalLink href="https://www.linkedin.com/in/lakejasper/" className="navbar-link" onClick={handleMenuExpand}>
-                    <NavBarIcon icon={<FiLinkedin size="55"/>} description={"L I N K E D I N"}/>
+                    <NavBarIcon icon={<FiLinkedin size="55"/>} description={"L I N K E D I N"} mobile={isMobile}/>
                 </ExternalLink>
                 </div>
                 <div className="prevent-resize">
                 <ExternalLink href="https://github.com/TheJaspinater" className="navbar-link" onClick={handleMenuExpand}>
-                    <NavBarIcon icon={<FiGithub size="55"/>} description={"G I T H U B"}/>
+                    <NavBarIcon icon={<FiGithub size="55"/>} description={"G I T H U B"} mobile={isMobile}/>
                 </ExternalLink>
                 </div>
             </div>}
@@ -69,9 +70,9 @@ const NavBar = () => {
     )
 };
 
-const NavBarIcon = ({icon, description}) => (
+const NavBarIcon = ({icon, description, mobile}) => (
     <div>
-        <div className="navbar-icon">
+        <div className={mobile ? "navbar-icon-mobile" : "navbar-icon"}>
             {icon}
         </div>
         <div className="navbar-description">
