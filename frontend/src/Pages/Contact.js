@@ -4,16 +4,22 @@ import Axios from '../api/Posts.js';
 import { RiSendPlane2Line } from 'react-icons/ri';
 
 const Contact = () => {
+    const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
     const [name, setName] = useState("");
     const [nameCSS, setNameCSS] = useState("form-input-good");
+    const [nameCSSMobile, setNameCSSMobile] = useState("form-input-good-mobile");
     const [email, setEmail] =useState("");
     const [emailCSS, setEmailCSS] = useState("form-input-good");
+    const [emailCSSMobile, setEmailCSSMobile] = useState("form-input-good-mobile");
     const [phone, setPhone] = useState("");
     const [company, setCompany] = useState("");
     const [message, setMessage] = useState("");
     const [messageCSS, setMessageCSS] = useState("form-input-good");
+    const [messageCSSMobile, setMessageCSSMobile] = useState("form-input-good-mobile");
     const [verify, setVerify] = useState("");
     const [verifyCSS, setVerifyCSS] = useState("form-input-good");
+    const [verifyCSSMobile, setVerifyCSSMobile] = useState("form-input-good-mobile");
     const [error, setError] = useState("");
     const [sent, setSent] = useState(true);
     const [hasRendered, setHasRendered] = useState(false);
@@ -54,16 +60,32 @@ const Contact = () => {
             });
         } else {
             if (name === ""){
-                setNameCSS("form-input-bad");
+                if (isMobile) {
+                    setNameCSSMobile("form-input-bad-mobile");
+                } else {
+                    setNameCSS("form-input-bad");
+                }
             }
             if (checkEmail(email) === false){
-                setEmailCSS("form-input-bad");
+                if (isMobile) {
+                    setEmailCSSMobile("form-input-bad-mobile");
+                } else {
+                    setEmailCSS("form-input-bad");
+                }
             }
             if (message === ""){
-                setMessageCSS("form-input-bad");
+                if (isMobile) {
+                    setMessageCSSMobile("form-input-bad-mobile");
+                } else {
+                    setMessageCSS("form-input-bad");
+                }
             }
             if (checkVerify(verify) === false){
-                setVerifyCSS("form-input-bad");
+                if (isMobile) {
+                    setVerifyCSSMobile("form-input-bad-mobile");
+                } else {
+                    setVerifyCSS("form-input-bad");
+                }
             }
         }
     }
@@ -76,8 +98,9 @@ const Contact = () => {
     });
 
     return (
-        <div className="contact-container">
-            <div className='fake-max-margin'/>
+        <div className={isMobile ? "contact-container-mobile" : "contact-container"}>
+            {isMobile && <div className="margin-mobile-nav"/>}
+            {!isMobile && <div className='fake-max-margin'/>}
             <div className="form-list">
                 <div className="collapsible">
                     <div className="content-parent"
@@ -94,25 +117,77 @@ const Contact = () => {
                     >
                         <div className="content">
                             <div className="contact-form">
-                                <label className="contact-title">C O N T A C T</label>
+                                <label className={(isMobile) ? "contact-title-mobile" : "contact-title"}>CONTACT</label>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="N A M E *" value={name} onChange={(e) => {setName(e.target.value); setNameCSS("form-input-good")}} className={nameCSS}></textarea>
+                                <textarea placeholder="NAME*" value={name} onChange={
+                                        (e) => {
+                                            setName(e.target.value);
+                                            if (isMobile) {
+                                                setNameCSSMobile("form-input-good-mobile");
+                                            } else {
+                                                setNameCSS("form-input-good");
+                                            }
+                                        }
+                                    }
+                                    className={(isMobile) ? nameCSSMobile : nameCSS}>
+                                </textarea>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="E M A I L *" value={email} onChange={(e) => {setEmail(e.target.value); setEmailCSS("form-input-good")}} className={emailCSS}></textarea>
+                                <textarea placeholder="EMAIL*" value={email} onChange={
+                                        (e) => {
+                                            setEmail(e.target.value);
+                                            if (isMobile) {
+                                                setEmailCSSMobile("form-input-good-mobile");
+                                            } else {
+                                                setEmailCSS("form-input-good");
+                                            }
+                                        }    
+                                    }
+                                    className={(isMobile) ? emailCSSMobile : emailCSS}>
+                                </textarea>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="P H O N E" value={phone} onChange={(e) => setPhone(e.target.value)} className="form-input-good"></textarea>
+                                <textarea placeholder="PHONE" value={phone} onChange={
+                                        (e) => setPhone(e.target.value)
+                                    } 
+                                    className={
+                                        (isMobile) ? "form-input-good-mobile" : "form-input-good"
+                                    }>
+                                </textarea>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="C O M P A N Y" value={company} onChange={(e) => setCompany(e.target.value)} className="form-input-good"></textarea>
+                                <textarea placeholder="COMPANY" value={company} onChange={
+                                        (e) => setCompany(e.target.value)
+                                    } className={
+                                        (isMobile) ? "form-input-good-mobile" : "form-input-good"
+                                    }>
+                                </textarea>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="M E S S A G E *" value={message} onChange={(e) => {setMessage(e.target.value); setMessageCSS("form-input-good")}} className={messageCSS} rows="5"></textarea>
+                                <textarea placeholder="MESSAGE*" value={message} onChange={
+                                        (e) => {
+                                            setMessage(e.target.value); 
+                                            if (isMobile) {
+                                                setMessageCSSMobile("form-input-good-mobile");
+                                            } else {
+                                                setMessageCSS("form-input-good");
+                                            }
+                                        }
+                                    } className={(isMobile) ? messageCSSMobile : messageCSS} rows="5"></textarea>
                             </div>
                             <div className="contact-form">
-                                <textarea placeholder="V E R I F Y   |   enter a 3 digit number *" value={verify} onChange={(e) => {setVerify(e.target.value); setVerifyCSS("form-input-good")}} className={verifyCSS}></textarea>
+                                <textarea placeholder="VERIFY | enter a 3 digit number*" value={verify} onChange={
+                                        (e) => {
+                                            setVerify(e.target.value);
+                                            if (isMobile) {
+                                                setVerifyCSSMobile("form-input-good-mobile");
+                                            } else {
+                                                setVerifyCSS("form-input-good");
+                                            }
+                                        }
+                                    } className={(isMobile) ? verifyCSSMobile : verifyCSS}>
+                                </textarea>
                             </div>
                         </div>
                     </div>

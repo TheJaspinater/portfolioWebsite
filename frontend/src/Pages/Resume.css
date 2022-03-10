@@ -8,8 +8,12 @@
     margin-bottom: 15%;
 }
 
-.margin {
-    margin-top: 40px;
+.margin-download-button {
+    margin-top: 2.5rem;
+}
+
+.margin-mobile-nav {
+    height: 12rem;
 }
 
 .resume-section {
@@ -17,8 +21,19 @@
     font-weight: 700;
     font-size: 1.5rem;
     color: #529959;
-    white-space:pre;
+    white-space: pre-wrap;
     margin-top: 2rem;
+    letter-spacing: .75rem;
+}
+
+.resume-section-mobile {
+    width: 90%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #529959;
+    white-space: pre-wrap;
+    margin-top: 2rem;
+    letter-spacing: .75rem;
 }
 
 .resume-subsection {
@@ -28,7 +43,17 @@
     font-weight: 700;
     font-size: 1rem;
     color: #264653;
-    white-space:pre;
+    white-space: pre-wrap;
+}
+
+.resume-subsection-mobile {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    width: 90%;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #264653;
+    white-space: pre-wrap;
 }
 
 .resume-details {
@@ -36,8 +61,17 @@
     font-weight: 500;
     font-size: 1rem;
     color: #264653;
-    white-space:pre;
-    white-space: normal;
+    white-space: pre-wrap;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.resume-details-mobile {
+    width: 90%;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #264653;
+    white-space: pre-wrap;
     margin-top: 0rem;
     margin-bottom: 0rem;
 }
@@ -56,6 +90,12 @@
     margin-bottom: auto;
 }
 
+.resume-list-mobile {
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow: scroll;
+}
+
 .resume-container {
     position: fixed;
     top: 0px;
@@ -70,13 +110,38 @@
     overflow:scroll;
 }
 
+.resume-container-mobile {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .resume-header {
     font-size: 1.875rem;
     font-weight: 700;
     margin-top: 0rem;
     margin-bottom: 0rem;
     color: #529959;
-    white-space:pre;
+    white-space: pre-wrap;
+    letter-spacing: .75rem;
+}
+
+.resume-header-mobile {
+    width: 90%;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: #529959;
+    white-space: pre-wrap;
+    letter-spacing: .75rem;
 }
 
 .download-icon {
@@ -97,6 +162,26 @@
     transition-duration: 150ms;
     transition-timing-function: linear;
 }
+
+.download-icon-mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #264653;
+    border-radius: 1.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+}
+
 .download-icon-spin {
     position: relative;
     display: flex;
@@ -111,7 +196,25 @@
     color: #264653;
     border-radius: 1.5rem;
     animation: spin;
-    animation-duration: 1000ms;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+}
+
+.download-icon-spin-mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #264653;
+    border-radius: 1.5rem;
+    animation: spin;
+    animation-duration: 100ms;
     animation-timing-function: ease-in-out;
 }
 
@@ -121,7 +224,19 @@
     color: #F4A261;
 }
 
+.download-icon-mobile:active {
+    background-color: #E9C46A;
+    border-radius: 0.50rem;;
+    color: #F4A261;
+}
+
 .download-icon-spin:hover {
+    background-color: #E9C46A;
+    border-radius: 0.50rem;;
+    color: #F4A261;
+}
+
+.download-icon-spin-mobile:active {
     background-color: #E9C46A;
     border-radius: 0.50rem;;
     color: #F4A261;
@@ -170,16 +285,36 @@
 
 .form-input-good {
     width: 60%;
+    font-weight: 700;
     background-color: transparent;
     border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
     font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     resize: none;
     color: #529959;
-    text-decoration: none;
     text-align: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
+}
+
+.form-input-good-mobile {
+    width: 90%;
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
+    font-size: 0.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    resize: none;
+    color: #529959;
+    text-align: center;
 }
 
 .form-input-good:hover {
@@ -189,6 +324,16 @@
     color: #529959;
 }
 .form-input-good:hover::placeholder {
+    color: #F4A261;
+}
+
+.form-input-good-mobile:active {
+    color: #F4A261;
+}
+.form-input-good-mobile::placeholder {
+    color: #529959;
+}
+.form-input-good-mobile:active::placeholder {
     color: #F4A261;
 }
 
@@ -205,20 +350,46 @@
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
-  }
+}
 
 .form-input-bad {
     width: 60%;
+    font-weight: 700;
     background-color: transparent;
     border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
     font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     resize: none;
     color: rgb(239, 68, 68, 1);
-    text-decoration: none;
+    animation: shake;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
     text-align: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
+}
+
+.form-input-bad-mobile {
+    width: 90%;
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-bottom-width: 2px;
+    border-color: rgb(0, 0, 0, 1);
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 700;
+    resize: none;
+    color: rgb(239, 68, 68, 1);
+    animation: shake;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    text-align: center;
 }
 
 .form-input-bad:hover {
@@ -228,6 +399,16 @@
     color: rgb(239, 68, 68, 1);
 }
 .form-input-bad:hover::placeholder {
+    color: #F4A261;
+}
+
+.form-input-bad-mobile:active {
+    color: #F4A261;
+}
+.form-input-bad-mobile::placeholder {
+    color: rgb(239, 68, 68, 1);
+}
+.form-input-bad-mobile:active::placeholder {
     color: #F4A261;
 }
 

@@ -62,14 +62,15 @@
     font-weight: 500;
     font-size: 1.875rem;
     color: #529959;
-    white-space:pre;
+    white-space: pre-wrap;
+    letter-spacing: .5rem;
     margin-top: 0rem;
     margin-bottom: 0rem;
     line-height: 0%;
 }
 
 .greeting-mobile {
-    width: 70%;
+    width: 80%;
     font-weight: 500;
     font-size: 1rem;
     color: #529959;
@@ -85,12 +86,13 @@
     margin-top: 0rem;
     margin-bottom: 0rem;
     color: #264653;
-    white-space:pre;
-    line-height: 0%;
+    white-space: pre-wrap;
+    letter-spacing: .5rem;
+    line-height: normal;
 }
 
 .name-mobile {
-    width: 70%;
+    width: 80%;
     font-size: 2rem;
     font-weight: 700;
     color: #264653;
@@ -106,12 +108,13 @@
     margin-top: 0rem;
     margin-bottom: 0rem;
     color: #264653;
-    white-space:pre;
-    line-height: 0%;
+    white-space: pre-wrap;
+    letter-spacing: .5rem;
+    line-height: normal;
 }
 
 .catch-phrase-mobile {
-    width: 70%;
+    width: 80%;
     font-size: 1rem;
     font-weight: 500;
     color: #264653;
@@ -126,7 +129,7 @@
 }
 
 .resume-link-mobile {
-    width: 70%;
+    width: 80%;
 }
 
 .resume-button {

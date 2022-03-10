@@ -34,23 +34,23 @@ const Home = () => {
                         {!isMobile && <div className="content">
                             <div className="home-content">
                                 <div className="greeting">
-                                    <p>H e l l o ,   m y   n a m e   i s <br></br></p>
+                                    <p>Hello, my name is<br></br></p>
                                 </div>
                             </div>
                             <div className="home-content">
                                 <div className="name">
-                                    <p>L A K E   J A S P E R .</p>
+                                    <p>LAKE JASPER.</p>
                                 </div>
                             </div>
                             <div className="home-content">
                                 <div className="catch-phrase">
-                                    <p>w e l c o m e   t o   m y   l i v i n g r o o m   s e r v e r !</p>
+                                    <p>welcome to my livingroom server!</p>
                                 </div>
                             </div>
                             <div className="home-content">
                                 <div className="resume-link">
                                 <Link to="/Resume" className="navbar-link">
-                                    <button className="resume-button">C h e c k   o u t   m y   r e s u m e !</button>
+                                    <button className="resume-button">Check out my resume!</button>
                                 </Link>
                                 </div>
                             </div>
