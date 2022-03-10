@@ -217,7 +217,9 @@ const Resume = () => {
                             </div>
                             <div className="margin-download-button"/>
                             <div className="resume-content">
-                                <input type="text"
+                                <textarea 
+                                    spellcheck="false"
+                                    type="text"
                                     placeholder="VERIFY | enter any 3 digit number *"
                                     value={verify}
                                     onChange={
@@ -229,8 +231,9 @@ const Resume = () => {
                                                 setVerifyCSS("form-input-good");
                                             }
                                             setIconCss("download-icon")}}
-                                    className={(isMobile) ? verifyCSSMobile : verifyCSS}> 
-                                </input>
+                                    className={(isMobile) ? verifyCSSMobile : verifyCSS}
+                                > 
+                                </textarea>
                             </div>
                         </div>
                     </div>

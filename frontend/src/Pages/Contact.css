@@ -77,7 +77,7 @@
     text-align: left;
 }
 
-.form-input-good {
+.contact-form-input-good {
     width: 60%;
     font-weight: 700;
     background-color: transparent;
@@ -95,7 +95,7 @@
     letter-spacing: 0.75rem;
 }
 
-.form-input-good-mobile {
+.contact-form-input-good-mobile {
     width: 90%;
     font-weight: 700;
     background-color: transparent;
@@ -104,34 +104,35 @@
     outline-offset: 2px;
     border-bottom-width: 2px;
     border-color: rgb(0, 0, 0, 1);
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
     font-weight: 700;
     resize: none;
     color: #529959;
     text-align: left;
-    letter-spacing: 0.75rem;
+    letter-spacing: 0.5rem;
+    white-space: pre-wrap;
 }
 
-.form-input-good:hover {
+.contact-form-input-good:hover {
     color: #F4A261;
 }
 
-.form-input-good::placeholder {
+.contact-form-input-good::placeholder {
     color: #529959;
 }
-.form-input-good:hover::placeholder {
+.contact-form-input-good:hover::placeholder {
     color: #F4A261;
 }
 
-.form-input-good-mobile:active {
+.contact-form-input-good-mobile:active {
     color: #F4A261;
 }
 
-.form-input-good-mobile::placeholder {
+.contact-form-input-good-mobile::placeholder {
     color: #529959;
 }
-.form-input-good-mobile:active::placeholder {
+.contact-form-input-good-mobile:active::placeholder {
     color: #F4A261;
 }
 
@@ -150,7 +151,7 @@
     }
   }
 
-.form-input-bad {
+.contact-form-input-bad {
     width: 60%;
     font-weight: 700;
     background-color: transparent;
@@ -165,13 +166,13 @@
     resize: none;
     color: rgb(239, 68, 68, 1);
     text-align: left;
+    letter-spacing: 0.75rem;
     animation: shake;
     animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
-    letter-spacing: 0.75rem;
 }
 
-.form-input-bad-mobile {
+.contact-form-input-bad-mobile {
     width: 90%;
     font-weight: 700;
     background-color: transparent;
@@ -180,35 +181,39 @@
     outline-offset: 2px;
     border-bottom-width: 2px;
     border-color: rgb(0, 0, 0, 1);
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
     font-weight: 700;
     resize: none;
     color: rgb(239, 68, 68, 1);
     text-align: left;
+    letter-spacing: 0.5rem;
+    white-space: pre-wrap;
     animation: shake;
     animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
-    letter-spacing: 0.75rem;
+    letter-spacing: 0.5rem;
+    white-space: pre-wrap;
+    text-decoration: none;
 }
 
-.form-input-bad:hover {
+.contact-form-input-bad:hover {
     color: #F4A261;
 }
-.form-input-bad::placeholder {
+.contact-form-input-bad::placeholder {
     color: rgb(239, 68, 68, 1);
 }
-.form-input-bad:hover::placeholder {
+.contact-form-input-bad:hover::placeholder {
     color: #F4A261;
 }
 
-.form-input-bad-mobile:active {
+.contact-form-input-bad-mobile:active {
     color: #F4A261;
 }
-.form-input-bad::placeholder {
+.contact-form-input-bad-mobile::placeholder {
     color: rgb(239, 68, 68, 1);
 }
-.form-input-bad-mobile:active::placeholder {
+.contact-form-input-bad-mobile:active::placeholder {
     color: #F4A261;
 }
 
@@ -277,7 +282,7 @@
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    color: #264653;
+    color: #529959;
     animation: spin;
     animation-duration: 1750ms;
     animation-timing-function: ease-in-out;
